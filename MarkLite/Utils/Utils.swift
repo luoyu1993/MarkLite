@@ -109,12 +109,25 @@ extension String {
 
 extension UIViewController {
     
+    func doIfPremiued(_ task: ()->(Void)) {
+        if Configure.shared.isVip {
+            task()
+            return
+        }
+        showAlert(title: /"PremiumOnly", message: nil, actionTitles: [/"Cancel",/"SubscribeNow"], textFieldconfigurationHandler: nil) { (index) in
+            if index == 1 {
+                
+            }
+        }
+    }
+    
     @discardableResult
     func showAlert(title: String? = nil,
                    message: String? = nil,
                    actionTitles: [String] = [],
                    textFieldconfigurationHandler: ((UITextField) -> Void)?  = nil,
                    actionHandler: ((Int) -> Void)?  = nil) -> UIAlertController{
+
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         for (index, actionTitle) in actionTitles.enumerated() {
             alert.addAction(UIAlertAction(title: actionTitle, style: index == 0 ? .cancel : .default, handler: { action in

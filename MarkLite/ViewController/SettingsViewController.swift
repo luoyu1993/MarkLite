@@ -28,7 +28,9 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
             ("AssistKeyboard","",#selector(assistBar)),
             ("AutoClear","",#selector(autoClear)),
             ]
-        
+        if !Configure.shared.isVip {
+            section.insertFirst(("PremiumAccount","",#selector(assistBar)))
+        }
         return [
             ("功能",section),
             ("外观",[
