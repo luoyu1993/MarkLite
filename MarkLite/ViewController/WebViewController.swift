@@ -75,7 +75,9 @@ class WebViewController: UIViewController, ImageSaver {
             }.disposed(by: disposeBag)
         
         webView.rx.didFinishLoad.subscribe { [weak self] _ in
-            self?.webView.stopLoadingAnimation()
+            guard let this = self else { return }
+            this.webView.stopLoadingAnimation()
+            this.webView.scrollView.contentOffset = CGPoint(x: 0, y: this.offset * this.webView.scrollView.contentSize.height)
             }.disposed(by: disposeBag)
         
         Configure.shared.markdownStyle.asObservable().subscribe(onNext: { [unowned self] (style) in

@@ -116,7 +116,15 @@ extension UIViewController {
         }
         showAlert(title: /"PremiumOnly", message: nil, actionTitles: [/"Cancel",/"SubscribeNow"], textFieldconfigurationHandler: nil) { (index) in
             if index == 1 {
-                
+                let sb = UIStoryboard(name: "Settings", bundle: Bundle.main)
+                guard let vc = sb.instantiateVC(PurchaseViewController.self) else {
+                    return
+                }
+                let nav = UINavigationController(rootViewController: vc)
+                if isPad {
+                    UIApplication.shared.keyWindow?.rootViewController?.presentVC(nav)
+                }
+                ez.topMostVC?.presentVC(nav)
             }
         }
     }

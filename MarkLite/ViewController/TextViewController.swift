@@ -85,10 +85,14 @@ class TextViewController: UIViewController {
             .bind(to: placeholderLabel.rx.isHidden)
             .disposed(by: disposeBag)
         
-        editView.rx.contentOffset.map{$0.y}.subscribe(onNext: { [weak self] (offset) in
-            guard let this = self else { return }
-            this.offsetChangedHandler?(offset / this.editView.contentSize.height)
-        }).disposed(by: disposeBag)
+        editView.rx.contentOffset
+            .map{$0.y}
+            .subscribe(onNext: { [weak self] (offset) in
+                guard let this = self else { return }
+                if offset > 1 {
+                    this.offsetChangedHandler?(offset / this.editView.contentSize.height)
+                }
+            }).disposed(by: disposeBag)
     }
     
     func textChanged() {

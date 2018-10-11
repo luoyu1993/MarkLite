@@ -87,66 +87,105 @@
             </objects>
             <point key="canvasLocation" x="-4757.6000000000004" y="-3965.0246305418723"/>
         </scene>
-        <!--View Controller-->
+        <!--Purchase View Controller-->
         <scene sceneID="wt9-19-7kM">
             <objects>
-                <viewController id="FSy-Ui-zzy" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PurchaseViewController" id="FSy-Ui-zzy" customClass="PurchaseViewController" customModule="MarkLite" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GOp-BL-QOt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Premium" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASc-A5-0Ag">
-                                <rect key="frame" x="147" y="94" width="68" height="20.5"/>
+                                <rect key="frame" x="131" y="94" width="68" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MarkLite" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeD-ro-lTt">
-                                <rect key="frame" x="32" y="84" width="107" height="48"/>
+                                <rect key="frame" x="16" y="84" width="107" height="48"/>
                                 <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="40"/>
                                 <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Kiu-E6-5aR">
-                                <rect key="frame" x="16" y="152" width="343" height="180.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Kiu-E6-5aR">
+                                <rect key="frame" x="16" y="152" width="343" height="201.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PremiumTitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQF-cr-4D7">
-                                        <rect key="frame" x="0.0" y="0.0" width="94.5" height="19.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SubscriptionTitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQF-cr-4D7">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SubscriptionDesc" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMh-I1-UlT">
-                                        <rect key="frame" x="0.0" y="39.5" width="114.5" height="17"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <rect key="frame" x="0.0" y="40.5" width="343" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PremiumPrice" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33I-W3-ieg">
-                                        <rect key="frame" x="0.0" y="76.5" width="101" height="19.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SubscriptionPrice" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33I-W3-ieg">
+                                        <rect key="frame" x="0.0" y="81" width="343" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                         <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fw3-4b-w2c">
-                                        <rect key="frame" x="0.0" y="116" width="69" height="30"/>
-                                        <state key="normal" title="Subscribe"/>
+                                        <rect key="frame" x="0.0" y="120.5" width="343" height="44"/>
+                                        <color key="backgroundColor" red="1" green="0.14065430121528433" blue="0.48968036466660148" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="flY-fn-zSa"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                        <state key="normal" title="Subscribe">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="purchaseProduct:" destination="FSy-Ui-zzy" eventType="touchUpInside" id="VEM-zg-m0C"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SubscribeTips" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJZ-8x-Rbj">
-                                        <rect key="frame" x="0.0" y="166" width="80" height="14.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <rect key="frame" x="0.0" y="184.5" width="343" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmF-1p-JB0">
+                                <rect key="frame" x="16" y="618" width="40" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Terms">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="terms:" destination="FSy-Ui-zzy" eventType="touchUpInside" id="fD0-YN-bX4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEi-1F-rdS">
+                                <rect key="frame" x="273" y="618" width="86" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="PrivacyPolicy">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="privacy:" destination="FSy-Ui-zzy" eventType="touchUpInside" id="6ge-yS-Ewc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="zeD-ro-lTt" firstAttribute="top" secondItem="lSZ-f3-oJl" secondAttribute="top" constant="20" id="37l-ez-M1t"/>
+                            <constraint firstItem="lSZ-f3-oJl" firstAttribute="trailing" secondItem="zEi-1F-rdS" secondAttribute="trailing" constant="16" id="9Az-Bj-xnH"/>
+                            <constraint firstItem="NmF-1p-JB0" firstAttribute="leading" secondItem="lSZ-f3-oJl" secondAttribute="leading" constant="16" id="DhC-gk-veS"/>
+                            <constraint firstItem="lSZ-f3-oJl" firstAttribute="bottom" secondItem="NmF-1p-JB0" secondAttribute="bottom" constant="20" id="LBu-ag-7IY"/>
                             <constraint firstItem="ASc-A5-0Ag" firstAttribute="centerY" secondItem="zeD-ro-lTt" secondAttribute="centerY" constant="-4" id="RQx-Ez-lbQ"/>
+                            <constraint firstItem="lSZ-f3-oJl" firstAttribute="bottom" secondItem="zEi-1F-rdS" secondAttribute="bottom" constant="20" id="f1I-Bh-LNZ"/>
                             <constraint firstItem="Kiu-E6-5aR" firstAttribute="top" secondItem="zeD-ro-lTt" secondAttribute="bottom" constant="20" id="h5d-7l-4Sy"/>
-                            <constraint firstItem="zeD-ro-lTt" firstAttribute="leading" secondItem="GOp-BL-QOt" secondAttribute="leadingMargin" constant="16" id="mqP-1c-vV6"/>
+                            <constraint firstItem="zeD-ro-lTt" firstAttribute="leading" secondItem="GOp-BL-QOt" secondAttribute="leadingMargin" id="mqP-1c-vV6"/>
                             <constraint firstItem="lSZ-f3-oJl" firstAttribute="trailing" secondItem="Kiu-E6-5aR" secondAttribute="trailing" constant="16" id="oBu-zH-MtI"/>
                             <constraint firstItem="ASc-A5-0Ag" firstAttribute="leading" secondItem="zeD-ro-lTt" secondAttribute="trailing" constant="8" id="qp8-7Y-FQ0"/>
                             <constraint firstItem="Kiu-E6-5aR" firstAttribute="leading" secondItem="lSZ-f3-oJl" secondAttribute="leading" constant="16" id="qzW-d2-UZ0"/>
@@ -156,16 +195,28 @@
                     <navigationItem key="navigationItem" id="t4r-NA-Ss2">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="Uab-53-vBo">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zi9-Eo-diL">
-                                <rect key="frame" x="16" y="7" width="91" height="30"/>
+                                <rect key="frame" x="16" y="5.5" width="91" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Restore"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Restore">
+                                    <color key="titleColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="restoreVIP:" destination="FSy-Ui-zzy" eventType="touchUpInside" id="l6G-Sf-nLc"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="BZ3-6j-Vye">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sy3-Ck-SBc">
-                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <rect key="frame" x="276" y="5.5" width="83" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="NotNow"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="NotNow">
+                                    <color key="titleColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="close:" destination="FSy-Ui-zzy" eventType="touchUpInside" id="0CN-6l-wTk"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>

@@ -9,6 +9,7 @@
 import UIKit
 import SideMenu
 import RxSwift
+import EZSwiftExtensions
 
 class SettingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -29,7 +30,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
             ("AutoClear","",#selector(autoClear)),
             ]
         if !Configure.shared.isVip {
-            section.insertFirst(("PremiumAccount","",#selector(assistBar)))
+            section.insertFirst(("PremiumAccount","",#selector(purchase)))
         }
         return [
             ("功能",section),
@@ -169,7 +170,7 @@ extension SettingsViewController {
     }
     
     @objc func style() {
-        let path = documentPath + "/style/markdown-style/"
+        let path = stylePath + "/markdown-style/"
         
         guard let subPaths = FileManager.default.subpaths(atPath: path) else { return }
         
@@ -184,7 +185,7 @@ extension SettingsViewController {
     }
     
     @objc func codeStyle() {
-        let path = documentPath + "/style/highlight-style/"
+        let path = stylePath + "/highlight-style/"
         
         guard let subPaths = FileManager.default.subpaths(atPath: path) else { return }
         
@@ -197,6 +198,17 @@ extension SettingsViewController {
         let vc = OptionsViewController()
         vc.options = wraper
         pushVC(vc)
+    }
+    
+    @objc func purchase() {
+        let sb = UIStoryboard(name: "Settings", bundle: Bundle.main)
+        guard let vc = sb.instantiateVC(PurchaseViewController.self) else {
+            return
+        }
+        dismiss(animated: false) {
+            let nav = UINavigationController(rootViewController: vc)
+            ez.topMostVC?.presentVC(nav)
+        }
     }
 
 }

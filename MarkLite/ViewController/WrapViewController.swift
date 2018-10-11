@@ -61,11 +61,10 @@ class WrapViewController: UIViewController, UIPopoverPresentationControllerDeleg
         }
         
         Configure.shared.editingFile.asObservable().map{ $0 != nil }.bind(to: emptyView.rx.isHidden).disposed(by: disposeBag)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        showFiles(self)
+        
+        Timer.runThisAfterDelay(seconds: 0.5) {
+            self.showFiles(self)
+        }
     }
     
     override func viewWillLayoutSubviews() {

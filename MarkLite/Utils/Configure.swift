@@ -53,6 +53,7 @@ class Configure: NSObject, NSCoding {
         if appVersion != currentVerion {
             upgrade()
         }
+        checkVipAvailable()
     }
     
     func reset() {
@@ -71,6 +72,28 @@ class Configure: NSObject, NSCoding {
         try? FileManager.default.removeItem(atPath: documentPath + "/__MACOSX")
         try? FileManager.default.createDirectory(atPath: draftPath, withIntermediateDirectories: true, attributes: nil)
         save()
+    }
+    
+    func checkVipAvailable(_ completion:((Bool)->Void)? = nil){
+        IAP.validateReceipt(itunesSecret) { (statusCode, products, json) in
+            defer {
+                DispatchQueue.main.async {
+                    completion?(self.isVip)
+                }
+            }
+            guard let products = products else {
+                self.isVip = false
+                return
+            }
+            print("products: \(products)")
+            let vipIdentifier = [premiumProductID]
+            let expiredDate = vipIdentifier.map{ products[$0] ?? Date(timeIntervalSince1970: 0) }.max() ?? Date(timeIntervalSince1970: 0)
+            
+            self.isVip = expiredDate.isFuture
+            
+            print("会员到期\(expiredDate.readableDate())")
+            print("会员状态\(self.isVip)")
+        }
     }
     
     func upgrade() {

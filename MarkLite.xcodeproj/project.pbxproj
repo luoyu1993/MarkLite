@@ -51,6 +51,9 @@
 		07E8275D1F5BF1BA0077A017 /* WrapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E8270F1F5BF1BA0077A017 /* WrapViewController.swift */; };
 		07E827651F5BF24B0077A017 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07E827671F5BF24B0077A017 /* Localizable.strings */; };
 		07E8276C1F5BFD880077A017 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E8276B1F5BFD880077A017 /* ImageSaver.swift */; };
+		76045C9D216E124C0084C0B5 /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76045C9C216E124C0084C0B5 /* PurchaseViewController.swift */; };
+		76045C9F216E12B50084C0B5 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76045C9E216E12B50084C0B5 /* IAPHelper.swift */; };
+		76045CA1216E1BD10084C0B5 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76045CA0216E1BD10084C0B5 /* InfoViewController.swift */; };
 		C1D8DF07B0DF6E27F81AA609 /* Pods_MarkLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BAF011D2BD7C7FE8749C859 /* Pods_MarkLite.framework */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +123,9 @@
 		2BAF011D2BD7C7FE8749C859 /* Pods_MarkLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarkLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35BB96C49577417FB30DDAC7 /* Pods-MarkLite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarkLite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarkLite/Pods-MarkLite.debug.xcconfig"; sourceTree = "<group>"; };
 		58249A080329B6A7C4EEF3E3 /* Pods-MarkLite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarkLite.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarkLite/Pods-MarkLite.release.xcconfig"; sourceTree = "<group>"; };
+		76045C9C216E124C0084C0B5 /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
+		76045C9E216E12B50084C0B5 /* IAPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
+		76045CA0216E1BD10084C0B5 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +255,7 @@
 				07E826FD1F5BF1BA0077A017 /* Utils.swift */,
 				07E8276B1F5BFD880077A017 /* ImageSaver.swift */,
 				0724281A1F726B0300C02F87 /* ImagePicker.swift */,
+				76045C9E216E12B50084C0B5 /* IAPHelper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -275,6 +282,8 @@
 				07E8270D1F5BF1BA0077A017 /* TextViewController.swift */,
 				07E8270E1F5BF1BA0077A017 /* WebViewController.swift */,
 				07E8270F1F5BF1BA0077A017 /* WrapViewController.swift */,
+				76045C9C216E124C0084C0B5 /* PurchaseViewController.swift */,
+				76045CA0216E1BD10084C0B5 /* InfoViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -453,9 +462,11 @@
 				07E827161F5BF1BA0077A017 /* html.c in Sources */,
 				07E827141F5BF1BA0077A017 /* escape.c in Sources */,
 				07E8274D1F5BF1BA0077A017 /* Utils.swift in Sources */,
+				76045C9F216E12B50084C0B5 /* IAPHelper.swift in Sources */,
 				07E8271D1F5BF1BA0077A017 /* File.swift in Sources */,
 				07E827111F5BF1BA0077A017 /* autolink.c in Sources */,
 				07E8274F1F5BF1BA0077A017 /* DottedLineView.swift in Sources */,
+				76045CA1216E1BD10084C0B5 /* InfoViewController.swift in Sources */,
 				0724281B1F726B0300C02F87 /* ImagePicker.swift in Sources */,
 				07E8275C1F5BF1BA0077A017 /* WebViewController.swift in Sources */,
 				07E827191F5BF1BA0077A017 /* stack.c in Sources */,
@@ -468,6 +479,7 @@
 				07E827501F5BF1BA0077A017 /* FileTableViewCell.swift in Sources */,
 				07E827491F5BF1BA0077A017 /* Constant.swift in Sources */,
 				07E8271A1F5BF1BA0077A017 /* version.c in Sources */,
+				76045C9D216E124C0084C0B5 /* PurchaseViewController.swift in Sources */,
 				07E827581F5BF1BA0077A017 /* NavigationController.swift in Sources */,
 				07E827481F5BF1BA0077A017 /* Configure.swift in Sources */,
 				07E8275D1F5BF1BA0077A017 /* WrapViewController.swift in Sources */,
@@ -629,7 +641,7 @@
 				INFOPLIST_FILE = MarkLite/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhubch.MarkLite;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhubc.marklite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ENABLE_BATCH_MODE = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "MarkLite/Core/MarkLite-Bridging-Header.h";
@@ -648,7 +660,7 @@
 				INFOPLIST_FILE = MarkLite/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhubch.MarkLite;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhubc.marklite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ENABLE_BATCH_MODE = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "MarkLite/Core/MarkLite-Bridging-Header.h";
