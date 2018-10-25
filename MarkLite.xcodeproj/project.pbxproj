@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0724281B1F726B0300C02F87 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0724281A1F726B0300C02F87 /* ImagePicker.swift */; };
-		07DE506F2153867A007B38D0 /* Style.zip in Resources */ = {isa = PBXBuildFile; fileRef = 07DE506E21538679007B38D0 /* Style.zip */; };
 		07E826961F5BF0F20077A017 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E826951F5BF0F20077A017 /* AppDelegate.swift */; };
 		07E8269D1F5BF0F20077A017 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07E8269C1F5BF0F20077A017 /* Assets.xcassets */; };
 		07E826A01F5BF0F20077A017 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07E8269E1F5BF0F20077A017 /* LaunchScreen.storyboard */; };
@@ -54,13 +53,13 @@
 		76045C9D216E124C0084C0B5 /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76045C9C216E124C0084C0B5 /* PurchaseViewController.swift */; };
 		76045C9F216E12B50084C0B5 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76045C9E216E12B50084C0B5 /* IAPHelper.swift */; };
 		76045CA1216E1BD10084C0B5 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76045CA0216E1BD10084C0B5 /* InfoViewController.swift */; };
+		76B8BC482181969E0074DEE2 /* style.zip in Resources */ = {isa = PBXBuildFile; fileRef = 76B8BC472181969E0074DEE2 /* style.zip */; };
 		C1D8DF07B0DF6E27F81AA609 /* Pods_MarkLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BAF011D2BD7C7FE8749C859 /* Pods_MarkLite.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0708A5651F6A2E4B0018B4CF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0724281A1F726B0300C02F87 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		07DE506E21538679007B38D0 /* Style.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = Style.zip; sourceTree = "<group>"; };
 		07E826921F5BF0F20077A017 /* MarkLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarkLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E826951F5BF0F20077A017 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07E8269C1F5BF0F20077A017 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -126,6 +125,7 @@
 		76045C9C216E124C0084C0B5 /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
 		76045C9E216E12B50084C0B5 /* IAPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
 		76045CA0216E1BD10084C0B5 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		76B8BC472181969E0074DEE2 /* style.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = style.zip; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,7 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				07E826D31F5BF1BA0077A017 /* samples.zip */,
-				07DE506E21538679007B38D0 /* Style.zip */,
+				76B8BC472181969E0074DEE2 /* style.zip */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -379,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07E827471F5BF1BA0077A017 /* Settings.storyboard in Resources */,
+				76B8BC482181969E0074DEE2 /* style.zip in Resources */,
 				07E827441F5BF1BA0077A017 /* Edit.storyboard in Resources */,
 				07E826A01F5BF0F20077A017 /* LaunchScreen.storyboard in Resources */,
 				07E827461F5BF1BA0077A017 /* Main_iPhone.storyboard in Resources */,
@@ -386,7 +387,6 @@
 				07E827451F5BF1BA0077A017 /* Main_iPad.storyboard in Resources */,
 				07E8269D1F5BF0F20077A017 /* Assets.xcassets in Resources */,
 				07E827651F5BF24B0077A017 /* Localizable.strings in Resources */,
-				07DE506F2153867A007B38D0 /* Style.zip in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

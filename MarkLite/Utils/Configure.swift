@@ -61,13 +61,13 @@ class Configure: NSObject, NSCoding {
         currentVerion = appVersion
         
         let destStylePath = URL(fileURLWithPath: supportPath)
-        try! Zip.unzipFile(Bundle.main.url(forResource: "Style", withExtension: "zip")!, destination: destStylePath, overwrite: true, password: nil, progress: nil)
+        try! Zip.unzipFile(Bundle.main.url(forResource: "style", withExtension: "zip")!, destination: destStylePath, overwrite: true, password: nil, progress: nil)
         
         let samplesPath = Bundle.main.url(forResource: "samples", withExtension: "zip")
         let destSamplesPath = URL(fileURLWithPath: documentPath)
         try! Zip.unzipFile(samplesPath!, destination: destSamplesPath, overwrite: true, password: nil, progress: nil)
         try? FileManager.default.moveItem(atPath: documentPath + "/samples/" + /"Instructions", toPath: documentPath + "/" + /"Instructions")
-        try? FileManager.default.moveItem(atPath: documentPath + "/samples/" + "样本展示.md", toPath: documentPath + "/" + "样本展示.md")
+        try? FileManager.default.moveItem(atPath: documentPath + "/samples/" + /"Example" + ".md", toPath: documentPath + "/" + /"Example" + ".md")
         try? FileManager.default.removeItem(atPath: documentPath + "/samples")
         try? FileManager.default.removeItem(atPath: documentPath + "/__MACOSX")
         try? FileManager.default.createDirectory(atPath: draftPath, withIntermediateDirectories: true, attributes: nil)

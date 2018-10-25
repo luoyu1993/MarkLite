@@ -121,6 +121,7 @@ class File {
     func appendChild(_ path: String) {
         let file = File(path: path, parent: self)
         _children.append(file)
+        isBlank = false
     }
     
     @discardableResult
@@ -133,6 +134,7 @@ class File {
         }
         let file = File(path: path, parent: self)
         _children.append(file)
+        isBlank = false
         return file
     }
 
@@ -144,6 +146,9 @@ class File {
             return file == self
         }) else { return false }
         parent?._children.remove(at: i)
+        if parent?.children.count ?? 0 == 0 {
+            parent?.isBlank = true
+        }
         return true
     }
     

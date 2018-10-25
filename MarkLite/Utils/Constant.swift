@@ -31,9 +31,9 @@ let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .user
 let supportPath =  NSSearchPathForDirectoriesInDomains(.applicationSupportDirectory, .userDomainMask, true).first ?? ""
 
 let configPath = supportPath
-let stylePath = supportPath + "/Style"
-let tempPath = supportPath + "/Temp"
-let draftPath = supportPath + "/Draft"
+let stylePath = supportPath + "/style"
+let tempPath = supportPath + "/temp"
+let draftPath = supportPath + "/draft"
 
 let iCloudPath: String = {
     guard let ubiquityURL = FileManager.default.url(forUbiquityContainerIdentifier: nil)?.appendingPathComponent("Documents") else {

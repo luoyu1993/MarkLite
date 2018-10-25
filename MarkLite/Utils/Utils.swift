@@ -49,7 +49,7 @@ extension String {
         
         guard let range = try? NSRegularExpression(pattern: "\\([0-9]+\\)", options: .caseInsensitive).rangeOfFirstMatch(in: self, options: .reportCompletion, range: NSMakeRange(0, self.length)),
             range.location != NSNotFound,
-            let num = self[range.location..<range.location+range.length].toInt() else {
+            let num = self[range.location+1..<range.location+range.length-1].toInt() else {
                 return self + "(1)"
         }
         

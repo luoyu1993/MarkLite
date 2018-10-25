@@ -50,7 +50,7 @@
 "Subscribed"="立即開通";
 
 "Premium"="高級帳戶";
-"Subscribe"="現在訂閱，免費試用壹周";
+"Subscribe"="現在訂閱";
 "Terms"="使用條款";
 "PrivacyPolicy"="隱私策略";
 "SubscriptionPrice"="現在訂閱可免費試用壹周，壹周後按$0.99/月收費，訂閱後可隨時取消";
@@ -114,6 +114,7 @@
 "EnablePhotoTips"="去iPhone的【設定】圖標，打開【隱私】，打開【照片】，找到【MarkLite】開啓即可";
 
 "Instructions"="使用說明";
+"Example"="樣本展示";
 
 "ThemeWhite"="簡潔白";
 "ThemeBlack"="高端黑";
